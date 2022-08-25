@@ -23,6 +23,7 @@ time, mark, audio, video {
 body {
 	font-family: 'Source Code Pro', monospace;
 	background-color: rgb(130, 184, 201);
+	margin-top: 120px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -65,10 +66,14 @@ aside h2 {
 }
 
 header {
+	position: fixed;
+	top: 0;
+ 	width: 100%;
 	display: flex;
 	justify-content: space-between;
+	padding: 10px 0 10px 0;
 	background-color: tomato;
-	padding: 10px;
+	box-shadow: 5px 9px 6px rgba(0, 0, 0, 0.5);
 }
 
 aside, section {
@@ -126,19 +131,83 @@ aside {
 	height: 450px;
 }
 
+main aside figure img {
+	border: solid #000 2px;
+}
+
 footer p {
 	text-align: center;
 	margin-top: 20px;
 }
 
-.conteudo {
+.ico-logo {
+	width: 40px;
+	margin: 0 10px 0 0;
+}
+
+.modal {
+	position: fixed;
+	top: 20%;
+	right: 0;
+	width: 200px;
+	padding: 10px;
+	background-color: yellow;
+	border: rgb(112, 112, 10) 1px solid;
+}
+
+.modal .fechar {
+	position: absolute;
+	right: 8px;
+	top: 4px;
+	width: 20px;
+	padding: 2px;
+	background-color: crimson;
+	color:white;
+	text-align: center;
+}
+
+/*
+Flexbox
+*/
+.conteudo, .conteudo-container {
 	width: 70%;
 	padding: 10px;
 	background-color: rgb(9, 121, 173);
 	color: white;
 }
 
-.ico-logo {
-	width: 40px;
-	margin: 0 10px 0 0;
+.conteudo-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+.box {
+	width: 46%;
+	background-color: tomato;
+	/* height: 40%; */
+	margin: 8px;
+	padding: 5px;
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.box h2 {
+	font-size: 1.5rem;
+	margin-left: 0;
+}
+
+.box a {
+	color: rgb(0, 255, 128);
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.box figure {
+	height: 220px;
+	border: solid #000 2px;
+	overflow: hidden;
+}
+
+#img-comecei-escrever {
+	margin-top: -80px;
 }
