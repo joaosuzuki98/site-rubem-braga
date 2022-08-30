@@ -79,6 +79,7 @@ header {
 	padding: 10px 0 10px 0;
 	background-color: tomato;
 	box-shadow: 5px 9px 6px rgba(0, 0, 0, 0.5);
+	z-index: 1000;
 }
 
 aside, section {
@@ -152,7 +153,7 @@ footer p {
 
 .modal {
 	position: fixed;
-	top: 10%;
+	top: 15%;
 	right: 10px;
 	width: 200px;
 	padding: 10px;
@@ -225,6 +226,10 @@ Flexbox
 	margin-top: -80px;
 }
 
+#btFechar {
+	cursor: pointer;
+}
+
 /* Layout para tablets e celulares */
 @media only screen and (max-width: 992px) {
 	* {
@@ -254,6 +259,10 @@ Flexbox
 		width: 60%;
 	}
 
+	aside {
+		margin-top: 10px;
+	}
+
 	.menu-hamburguer {
 		display: block;
 		width: 40px;
@@ -261,7 +270,6 @@ Flexbox
 	}
 
 	.menu-phone {
-		display: block;
 		position: fixed;
 		left: 0;
 		top: 0;
@@ -269,7 +277,6 @@ Flexbox
 		width: 50%;
 		padding: 10px;
 		background-color: white;
-		z-index: 1000;
 	}
 
 	.menu-phone ul {
