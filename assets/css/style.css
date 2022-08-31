@@ -153,7 +153,7 @@ footer p {
 
 .modal {
 	position: fixed;
-	top: 15%;
+	top: 20%;
 	right: 10px;
 	width: 200px;
 	padding: 10px;
@@ -230,6 +230,24 @@ Flexbox
 #btFechar {
 	cursor: pointer;
 }
+/* 
+@media only screen and (max-width: 1580px) {
+	img {
+		height: 100%;
+	}
+
+	#img-comecei-escrever {
+		margin-top: 0;
+	}
+}
+
+@media only screen and (max-width: 1410px) {
+	h2 {
+		font-size: 1rem;
+	}
+} */
+
+/* Ir no photoshop e cortar todas as imagens */
 
 /* Layout para tablets e celulares */
 @media only screen and (max-width: 992px) {
