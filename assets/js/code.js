@@ -8,7 +8,14 @@ const txtData = tempo.getFullYear() +  ' - horas: ' + tempo.getHours() + ' minut
 
 // ELEMENTOS DOM
 const spanData = document.getElementById('data')
-const btFechar = document.getElementById('btFechar')
+
+let noConst = false
+try {
+    const btFechar = document.getElementById('btFechar')
+} catch {
+    noConst = true
+    console.log('Elemento não encontrado')
+}
 const divModal = document.getElementById('divModal')
 const btHamburguer = document.getElementById('btHamburguer')
 const navPhone = document.getElementById('navPhone')
@@ -19,10 +26,12 @@ spanData.innerText = txtData
 
 // AÇÕES DO USUÁRIO (eventos)
 // Ao clicar no id "btFechar"
-btFechar.addEventListener('click', () => {
-    // Oculta o divModal - CSS display:none por JS
-    divModal.style.display = 'none'
-})
+if (noConst) {
+    btFechar.addEventListener('click', () => {
+        // Oculta o divModal - CSS display:none por JS
+        divModal.style.display = 'none'
+    })  
+}
 
 btHamburguer.addEventListener('click', () => {
     navPhone.style.display = 'block'
